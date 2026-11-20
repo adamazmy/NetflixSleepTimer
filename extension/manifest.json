@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Netflix Sleep Timer",
+  "version": "1.0.0",
+  "description": "Adds a sleep timer button to the Netflix player: fades the sound, pauses, then sleeps / turns off the screen / shuts down the PC.",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmc2PBsU9blJazyBqMNcIJFPqIVfnQRRTTA3MVMpWrFoTKWs/Dp4/tG7ChXYMho3B1F742q22HRUVSaHuUWFkEzqTSgmEXJ1PtgcxJTgG//e3szf4ajlCA+P8zb2e9a1g9xLa4iZT2tXlxQLvE7Y+iyJ77sr0vHd4GSDejdwcH2bok7dvnBxcmU+t8jfDOScUMHNe8K3TLxpQzg50wMeI45iHmb8pAxXwh/akvf0tQvEoUkOAKU4E2AuJq3fvZtoCkERdQVlAZSUb68a/fOyS04cg7vP6/bt725uXjNEwz+wzQUp2nAVWvrgwhj5Y9w9LHve12aMylDhUOw+p21efhQIDAQAB",
+  "permissions": ["nativeMessaging", "storage"],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [
+    {
+      "matches": ["https://www.netflix.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

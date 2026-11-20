@@ -1,0 +1,7 @@
+# AgentsRoom / Claude Code local plumbing
+.agentsroom/
+.claude/settings.local.json
+.mcp.json
+
+# Generated per machine by Install.ps1 (contains absolute paths)
+native-host/com.netflixsleeptimer.host.json
