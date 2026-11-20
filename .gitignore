@@ -1,4 +1,4 @@
-# AgentsRoom / Claude Code local plumbing
+# Local editor / tool settings
 .agentsroom/
 .claude/settings.local.json
 .mcp.json
